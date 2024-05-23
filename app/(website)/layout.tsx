@@ -12,37 +12,18 @@ async function sharedMetaData(params) {
     title: {
       default:
         settings?.title ||
-        "Stablo - Blog Template for Next.js & Sanity CMS",
-      template: "%s | Stablo"
+        "MAJELIS TA'LIM AL AZAM | KALIGENDING",
+      template: "GendingSoft"
     },
     description:
       settings?.description ||
-      "Stablo - popular open-source next.js and sanity blog template",
-    keywords: ["Next.js", "Sanity", "Tailwind CSS"],
-    authors: [{ name: "Surjith" }],
+      "MAJELIS TA'LIM AL AZAM | KALIGENDING",
+    keywords: ["majelis", "taklim", "kaligending", "gendingsoft", "gending", "soft", "majelis taklim", "majelis taklim kaligending", "majelis taklim al azam", "majelis taklim al azam kaligending", "majelis taklim al azam kaligending gendingsoft"],
+    authors: [{ name: "albabriziq" }],
     canonical: settings?.url,
-    openGraph: {
-      images: [
-        {
-          url:
-            urlForImage(settings?.openGraphImage)?.src ||
-            "/img/opengraph.jpg",
-          width: 800,
-          height: 600
-        }
-      ]
-    },
-    twitter: {
-      title: settings?.title || "Stablo Template",
-      card: "summary_large_image"
-    },
-    robots: {
-      index: true,
-      follow: true
-    }
-  };
-}
 
+  }
+}
 export async function generateMetadata({ params }) {
   return await sharedMetaData(params);
 }
